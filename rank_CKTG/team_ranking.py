@@ -47,17 +47,17 @@ def process_data(data):
     return processed_data
 
 processed_data = process_data(data)
-
+#Build your database. This's just example
 def create_table():
     conn = psycopg2.connect(
         host="localhost",
         port="5433",
         database="world_ranking",
         user="postgres",
-        password="44444"
+        password="/////" #your password
     )
     cur = conn.cursor()
-   
+#Create table by your self :))) 
     cur.execute("""
         CREATE TABLE IF NOT EXISTS team_ranking (
             rk INT PRIMARY KEY,
@@ -78,7 +78,7 @@ def insert_data(processed_data):
         port="5433",
         database="world_ranking",
         user="postgres",
-        password="44444"
+        password="/////"
     )
     cur = conn.cursor()
 
